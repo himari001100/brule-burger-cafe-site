@@ -1,0 +1,357 @@
+[index.html](https://github.com/user-attachments/files/22988896/index.html)
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Brûlé Burger</title>
+<meta name="description" content="カフェサイト">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="img/favicon.ico">
+<link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+<header class="header">
+  <h1><a href="index.html">Brûlé Burger</a></h1>
+
+  <!-- ▼ ハンバーガーボタンを追加 -->
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く/閉じる">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <!-- ▲ -->
+
+  <nav class="menu__list" id="nav-menu">
+    <ul>
+      <li><a href="#news">NEWS</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#drink">DRINK</a></li>
+      <li><a href="#food">FOOD</a></li>
+      <li><a href="#sweets">SWEETS</a></li>
+      <li><a href="#access">ACCESS</a></li>
+      <li>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="img/instagram.png" alt="Instagram">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+ <main>
+ <div class="slideshow-container">
+    <div class="slide active">
+      <img src="img/1.png" alt="画像1">
+    </div>
+    <div class="slide">
+      <img src="img/2.png" alt="画像2">
+    </div>
+    <div class="slide">
+      <img src="img/3.png" alt="画像3">
+    </div>
+</div>
+
+ <div class="container fadein">
+<div class="text">
+ <p>香り高い自家焙煎コーヒーや季節の素材を活かしたスイーツをご用意。<br>
+ランチやアフタヌーンティー、夕暮れ時のディナーまで、ゆったりとした空間でお楽しみいただけます。</p>
+</div>
+
+<section class="news_section">
+ <div class="menu">
+   <h2 id="news">NEWS</h2>
+   <p>お知らせ</p>
+ </div>
+
+ <div class="news_article">
+  <article class="article">
+  <a href="news1.html">
+    <time datetime="2025-09-03">2025.9.03</time>
+    <h3>季節限定スイーツ「栗とキャラメルのタルト」登場</h3>
+  </a>
+</article>
+
+<article>
+  <a href="news2.html">
+    <time datetime="2025-09-10">2025.9.10</time>
+    <h3>朝のモーニングセットに新メニュー追加</h3>
+  </a>
+</article>
+
+<article>
+  <a href="news3.html">
+    <time datetime="2025-09-18">2025.9.18</time>
+    <h3>営業時間変更のお知らせ（平日 11:00〜20:00）</h3>
+  </a>
+</article>
+
+<article>
+  <a href="news4.html">
+    <time datetime="2025-09-25">2025.9.25</time>
+    <h3>店内で楽しめる「秋のブックコーナー」開始のお知らせ</h3>
+  </a>
+</article>
+</div>
+</section>
+
+ <section class="about__section">
+ <div class="menu">
+   <h2 id="about">ABOUT</h2>
+   <p>お店紹介</p>
+ </div>
+
+ <div class="about">
+ <div class="about__text">
+    <p>“ゆったりとした自由な時間”
+東京のど真ん中、<br>木々に囲まれた
+ゆったりとした空間。<br>
+コーヒー片手に、くつろいだり仕事をしたり…<br>
+自由なお時間をお楽しみください。<br>
+季節の素材を活かしたフードやスイーツも充実。<br>
+日常の喧騒を忘れて、ここだけの時間をお過ごしいただけます。</p>
+ </div>
+
+ <div class="about__img">
+    <img src="img/about.jpg" alt="店内写真" class="fadein">
+ </div>
+ </div>
+ </section>
+
+ <section class="drink__section">
+ <div class="menu">
+   <h2 id="drink"><span>DRINK</span></h2>
+  <p>お飲み物</p>
+ </div>
+
+ <div class="drink">
+  <div class="product-container">
+    <div class="product-list">
+       <div class="product-item">
+        <img src="img/drink0.webp" alt="商品1">
+        <h3 class="product-title">アイスモカフラペチーノ</h3>
+        <p class="product-price">¥540</p>
+       </div>
+       <div class="product-item">
+        <img src="img/drink1.webp" alt="商品2">
+        <h3 class="product-title">チョコチップフラペチーノ</h3>
+        <p class="product-price">¥650</p>
+       </div>
+       <div class="product-item">
+        <img src="img/drink2.jpg" alt="商品3">
+        <h3 class="product-title">カプチーノ</h3>
+        <p class="product-price">¥550</p>
+       </div>
+    </div>
+  </div>
+  </div>
+  <div class="drink__text-menu">
+  <div class="drink__menu-container">
+    <div class="drink__menu">
+      <div class="drink__item">
+        <span class="drink__name">アイスコーヒー</span>
+        <span class="drink__price">¥400</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">カプチーノ</span>
+        <span class="drink__price">¥450</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">カフェラテ</span>
+        <span class="drink__price">¥480</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">アイスティー</span>
+        <span class="drink__price">¥400</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">レモネード</span>
+        <span class="drink__price">¥450</span>
+      </div>
+    </div>
+
+    <div class="drink__menu">
+      <div class="drink__item">
+        <span class="drink__name">エスプレッソ</span>
+        <span class="drink__price">¥350</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">モカ</span>
+        <span class="drink__price">¥500</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">抹茶ラテ</span>
+        <span class="drink__price">¥480</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">チョコレートドリンク</span>
+        <span class="drink__price">¥500</span>
+      </div>
+      <div class="drink__item">
+        <span class="drink__name">ミルク</span>
+        <span class="drink__price">¥350</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+ </section>
+
+<!-- フードセクション -->
+<section class="food__section">
+  <div class="menu">
+    <h2 id="food"><span>FOOD</span></h2>
+    <p>お食事</p>
+  </div>
+
+  <!-- カード3枚 -->
+  <div class="product-container">
+    <div class="product-list">
+      <div class="product-item">
+        <img src="img/main1.webp" alt="商品1">
+        <h3 class="product-title">デミグラスバーガー</h3>
+        <p class="product-price">¥1500</p>
+      </div>
+      <div class="product-item">
+        <img src="img/food2.webp" alt="商品2">
+        <h3 class="product-title">ダブルチーズバーガー</h3>
+        <p class="product-price">¥1640</p>
+      </div>
+      <div class="product-item">
+        <img src="img/food3.webp" alt="商品3">
+        <h3 class="product-title">ベーコンレタスバーガー</h3>
+        <p class="product-price">¥1780</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- フードのテキストメニュー -->
+  <div class="food__text-menu">
+    <div class="food__menu-container">
+      <div class="food__menu">
+        <div class="food__item"><span class="food__name">デミグラスバーガー + ポテト</span><span class="food__price">¥1500</span></div>
+        <div class="food__item"><span class="food__name">ダブルチーズバーガー + ナゲット</span><span class="food__price">¥1640</span></div>
+        <div class="food__item"><span class="food__name">ベーコンレタスバーガー + ポテト</span><span class="food__price">¥1780</span></div>
+      </div>
+      <div class="food__menu">
+        <div class="food__item"><span class="food__name">フレッシュエッグサラダ + ポテト</span><span class="food__price">¥1200</span></div>
+        <div class="food__item"><span class="food__name">ソウルクッパ + ナゲット</span><span class="food__price">¥1140</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- スイーツセクション -->
+<section class="sweets__section">
+  <div class="menu">
+    <h2 id="sweets"><span>SWEETS</span></h2>
+    <p>デザート</p>
+  </div>
+
+  <!-- カード3枚 -->
+  <div class="product-container">
+    <div class="product-list">
+      <div class="product-item">
+        <img src="img/sweet1.webp" alt="商品1">
+        <h3 class="product-title">パンケーキ</h3>
+        <p class="product-price">¥1500</p>
+      </div>
+      <div class="product-item">
+        <img src="img/sweet2.webp" alt="商品2">
+        <h3 class="product-title">ダブルバニラパフェ</h3>
+        <p class="product-price">¥1340</p>
+      </div>
+      <div class="product-item">
+        <img src="img/sweet3.webp" alt="商品3">
+        <h3 class="product-title">ストロベリーチーズケーキ</h3>
+        <p class="product-price">¥880</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- スイーツのテキストメニュー -->
+  <div class="sweets__text-menu">
+    <div class="sweets__menu-container">
+      <div class="sweets__menu">
+        <div class="sweets__item"><span class="sweets__name">チョコケーキ</span><span class="sweets__price">¥900</span></div>
+        <div class="sweets__item"><span class="sweets__name">ベイクドチーズケーキ</span><span class="sweets__price">¥950</span></div>
+        <div class="sweets__item"><span class="sweets__name">フルーツタルト</span><span class="sweets__price">¥1000</span></div>
+        <div class="sweets__item"><span class="sweets__name">パンナコッタ</span><span class="sweets__price">¥880</span></div>
+        <div class="sweets__item"><span class="sweets__name">モンブラン</span><span class="sweets__price">¥1200</span></div>
+      </div>
+      <div class="sweets__menu">
+        <div class="sweets__item"><span class="sweets__name">ガトーショコラ</span><span class="sweets__price">¥1000</span></div>
+        <div class="sweets__item"><span class="sweets__name">ティラミス</span><span class="sweets__price">¥950</span></div>
+        <div class="sweets__item"><span class="sweets__name">プリンアラモード</span><span class="sweets__price">¥880</span></div>
+        <div class="sweets__item"><span class="sweets__name">シュークリーム</span><span class="sweets__price">¥850</span></div>
+        <div class="sweets__item"><span class="sweets__name">アイスクリーム</span><span class="sweets__price">¥600</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="access__section">
+  <div class="menu">
+   <h2 id="access">ACCESS</h2>
+   <p>アクセス</p>
+  </div>
+
+  <div class="access">
+ <div class="access__img">
+    <img src="img/access.jpeg" alt="店舗写真">
+ </div>
+ <div class="access__text">
+<ul class="access-info">
+  <li><strong>店名：</strong>Brûlé Burger</li>
+  <li><strong>住所：</strong>東京都渋谷区神宮前1-2-3</li>
+  <li><strong>営業時間：</strong>10:00〜20:00（L.O.19:30）</li>
+  <li><strong>定休日：</strong>水曜</li>
+  <li><strong>電話：</strong>03-1234-5678</li>
+</ul>
+<div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.123456789!2d139.7123456!3d35.6654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188xxxxxx!2sExample%20Place!5e0!3m2!1sja!2sjp!4v1234567890"
+  width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+ </div>
+ </div>
+</section>
+
+</div>
+</main>
+
+
+<footer>
+    <nav class="menu__list">
+    <ul>
+      <li><a href="#news">NEWS</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#drink">DRINK</a></li>
+      <li><a href="#food">FOOD</a></li>
+      <li><a href="#sweets">SWEETS</a></li>
+      <li><a href="#access">ACCESS</a></li>
+    </ul>
+  </nav>
+
+  <div class="cta-button">
+  <a href="#reservation" class="btn">ご予約はこちらから</a>
+  </div>
+  <p>ランチタイムは混み合うため予約をおすすめします</p>
+<div class="footer-contact">
+      <p><strong>電話：</strong>03-1234-5678</p>
+      <p><strong>メール：</strong>info@cafe-example.jp</p>
+    </div>
+     <p>&copy; 2025 Brûlé Burger</p>
+</footer>
+
+<!-- JavaScriptファイルの読み込み -->
+  <script src="js/main-slider.js"></script>
+  <script src="js/fadein.js"></script>
+</body>
+
+
+
