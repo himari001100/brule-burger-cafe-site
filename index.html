@@ -13,9 +13,18 @@
 
 <body>
 
- <header class="header">
+<header class="header">
   <h1><a href="index.html">Brûlé Burger</a></h1>
-   <nav class="menu__list">
+
+  <!-- ▼ ハンバーガーボタンを追加 -->
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く/閉じる">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <!-- ▲ -->
+
+  <nav class="menu__list" id="nav-menu">
     <ul>
       <li><a href="#news">NEWS</a></li>
       <li><a href="#about">ABOUT</a></li>
@@ -23,10 +32,15 @@
       <li><a href="#food">FOOD</a></li>
       <li><a href="#sweets">SWEETS</a></li>
       <li><a href="#access">ACCESS</a></li>
-      <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src="img/instagram.png"></a></li>
+      <li>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <img src="img/instagram.png" alt="Instagram">
+        </a>
+      </li>
     </ul>
   </nav>
- </header>
+</header>
+
 
  <main>
  <div class="slideshow-container">
