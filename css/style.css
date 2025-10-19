@@ -1,0 +1,849 @@
+@charset "UTF-8";
+
+html{
+box-sizing: border-box;
+scroll-behavior: smooth;
+font-size:100%;
+
+}
+body {
+font-family: Noto Sans JP;
+line-height: 1.6;
+color: #4B3A2A;
+background-color:#FBF6F0;
+font-size: 1rem ;
+padding-top: 90px; /* ヘッダーの高さ分を余白にする（ヘッダー高さが80pxなら） */
+}
+
+
+a {
+text-decoration: none;
+color: inherit;
+}
+img {
+max-width: 100%;
+height: auto;
+}
+
+li {
+list-style: none;
+}
+
+.container {
+max-width: 1800px;   /* 全体の最大幅 */
+padding: 0 40px;     /*左右に40pxずつ余白 */
+box-sizing: border-box;
+width: 100%;
+}
+
+section {
+  scroll-margin-top: 150px; /* ヘッダーの高さ分に合わせる */
+}
+
+/*ヘッダー*/
+.header{
+display: flex;
+justify-content: space-between;
+  width: 100%;
+  align-items: center; /* 縦を中央揃え */
+  margin: 0 auto;
+ padding: 20px 40px; /* 外側のマージン */
+ position: fixed;   /* 固定する */
+  top: 0;            /* 画面の上部に配置 */
+  left: 0;
+  width: 100%;       /* 横幅いっぱい */
+  background-color: #fff; /* 背景色（透明だと下が透けるので指定するのがおすすめ） */
+  z-index: 1000;     /* 他の要素より上に表示する */
+}
+
+.menu__list ul{
+display: flex;
+color: #C37A3D;
+gap:12px;
+font-size:1.3rem;
+justify-content: space-between;
+
+}
+
+.menu__list a {
+  position: relative;
+  color: #C37A3D;
+  text-decoration: none;
+}
+
+.menu__list a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #C37A3D;
+  left: 0;
+  bottom: -3px;
+  transition: width 0.3s ease;
+}
+.menu {
+  margin: 100px auto 80px;
+}
+
+
+.menu__list a:hover::after {
+  width: 100%;
+}
+
+.menu__list img {
+  width: 10%; 
+  height: auto; /* 縦横比を維持 */
+}
+
+/*スライドショー*/
+.slideshow-container {
+
+  position: relative;
+  width: 100%;
+  height: 800px}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 3s ease; /* 3秒かけてフェード */
+  padding: 10px;       /* 画像の周りに余白を確保 */
+  box-sizing: border-box; /* パディング込みでサイズを計算 */
+}
+
+.slide img {
+  width: 100%;
+  display: block;
+  object-fit: cover; /* コンテナ内にきれいに収める */
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoomFade 12s ease-in-out infinite alternate;
+}
+
+@keyframes zoomFade {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+}
+
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+
+.slide .fade ::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+}
+
+.text{
+margin: 0 auto;
+margin:300px 150px 0;
+text-align: center;
+font-size: 1.2rem;
+}
+
+
+/* タイトル部分 */
+.menu {
+  display: flex;
+  flex-direction: column;  /* h2 と p を縦に並べる */
+  justify-content: center; /* 縦方向中央 */
+  align-items: center;     /* 横方向中央 */
+  text-align: center;      /* 念のため文字も中央 */
+  margin: 150px auto;       /* 上下余白 */
+}
+
+
+
+
+ .menu h2,
+ .menu p {
+
+  margin: 0 ;
+  color: #4B3A2A;
+}
+
+ .menu h2 {
+  font-size: 2rem;
+  letter-spacing: 0.15em;
+}
+
+ .menu p {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  letter-spacing: 0.2em;
+}
+
+/* -----------------------------
+   ニュース一覧の体裁
+----------------------------- */
+.news_article article {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+.news_article{
+justify-content: center; /* 縦方向中央 */
+  align-items: center;     /* 横方向中央 */
+  text-align: lefr;      /* 念のため文字も中央 */
+  margin: 150px auto;       /* 上下余白 */
+padding:50px 100px}
+
+.news_article a {
+  text-decoration: none;
+  color: #4B3A2A;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  transition: color 0.3s ease; /* 色が変わるときに滑らかに */
+}
+
+.news_article a:hover {
+  color: #C37A3D; /* ホバー時の文字色（ブランドカラー） */
+}
+.news_article time {
+  font-size: 0.9rem;
+  color: #4B3A2A;
+}
+
+.news_article h3 {
+  font-size: 1rem;
+  flex: 1;
+  margin-left: 10px;
+}
+
+
+
+
+/*about*/
+
+
+.about{
+  max-width: 1200px;       /* 最大幅を1200pxに制限 */
+  margin: 0 auto;          /* 中央寄せ */
+  padding: 0 4%;           /* 左右余白 */
+  display: flex;           /* 左右並び */
+  align-items: center;     /* 縦位置を中央揃え */
+  gap: 100px;               /* 画像とテキストの間隔 */
+}
+
+.about__text
+{text-align: left;
+margin: 0 auto;
+font-size:1.1rem;}
+
+.about__img img{
+ text-align: center;
+ border-radius: 12px;     /* 角を丸くして柔らかい印象に */
+}
+
+
+/* 背景帯を持たせる */
+.drink__section .menu {
+  position: relative;            /* オーバーレイや文字前面用 */
+  width: 100%;
+  display: block;
+  margin:150px auto;
+  padding: 100px 0;               /* 帯の高さ */
+  text-align: center;
+
+  background-image: url(../img/drink3.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;            /* 任意 */
+  overflow: hidden;
+}
+
+/* 文字を前面に出す */
+.drink__section .menu h2 span,
+.drink__section .menu p {
+  position: relative;  /* 背景より前面に出す */
+  z-index: 1;
+  color: #fff;
+}
+
+/* h2の文字サイズや太さ */
+.drink__section .menu h2 span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* pの文字サイズや間隔 */
+.drink__section .menu p {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+/* optional: 半透明オーバーレイで文字をさらに読みやすく */
+.drink__section .menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3); /* 調整可能 */
+  z-index: 0;
+}
+
+
+
+
+/* 背景帯を持たせる */
+.food__section .menu {
+  position: relative;            /* オーバーレイや文字前面用 */
+  width: 100%;
+  display: block;
+  margin:150px auto;
+  padding: 100px 0;               /* 帯の高さ */
+  text-align: center;
+
+  background-image: url(../img/food0.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;            /* 任意 */
+  overflow: hidden;
+}
+
+/* 文字を前面に出す */
+.food__section .menu h2 span,
+.food__section .menu p {
+  position: relative;  /* 背景より前面に出す */
+  z-index: 1;
+  color: #fff;
+}
+
+/* h2の文字サイズや太さ */
+.food__section .menu h2 span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* pの文字サイズや間隔 */
+.food__section .menu p {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+/* optional: 半透明オーバーレイで文字をさらに読みやすく */
+.food__section .menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3); /* 調整可能 */
+  z-index: 0;
+}
+
+/* 背景帯を持たせる */
+.sweets__section .menu {
+  position: relative;            /* オーバーレイや文字前面用 */
+  width: 100%;
+  display: block;
+  margin:150px auto;
+  padding: 100px 0;               /* 帯の高さ */
+  text-align: center;
+
+  background-image: url(../img/sweet0.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 8px;            /* 任意 */
+  overflow: hidden;
+}
+
+/* 文字を前面に出す */
+.sweets__section .menu h2 span,
+.sweets__section .menu p {
+  position: relative;  /* 背景より前面に出す */
+  z-index: 1;
+  color: #fff;
+}
+
+/* h2の文字サイズや太さ */
+.sweets__section .menu h2 span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* pの文字サイズや間隔 */
+.sweets__section .menu p {
+  font-size: 0.8rem;
+  margin-top: 8px;
+}
+
+/* optional: 半透明オーバーレイで文字をさらに読みやすく */
+.sweets__section .menu::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3); /* 調整可能 */
+  z-index: 0;
+}
+
+
+
+
+
+/* -----------------------------
+   カードレイアウト共通
+----------------------------- */
+.product-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.product-list {
+  display: grid;
+  gap: 28px;
+}
+
+/* 商品カード */
+.product-item {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.product-title,
+.product-price {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.product-item h3,
+.product-item p {
+  display: inline-block;
+  padding: 12px 18px;
+}
+
+.product-item h3 {
+  float: left;
+  font-weight: 600;
+}
+
+.product-item p {
+  float: right;
+  color: #555;
+}
+
+.product-item::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.food__section .product-list,
+.sweets__section .product-list {
+  display: flex;
+  gap: 16px;
+}
+
+.food .product-item,
+.sweets__section .product-item {
+  width: calc(33.333% - 16px); /* 3枚横並びの場合 */
+}
+
+
+/* ドリンク・フード・スイーツのテキストメニュー */
+.drink__text-menu, .food__text-menu, .sweets__text-menu {
+  margin-top: 20px;
+}
+
+.drink__menu-container, .food__menu-container, .sweets__menu-container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.drink__menu, .food__menu, .sweets__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1 1 200px;
+}
+
+.drink__item, .food__item, .sweets__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 12px;
+border-bottom: 1px solid #ccc;  /* 下線の色を変更可 */
+}
+
+/* -----------------------------
+   セクション別グリッド設定
+----------------------------- */
+.drink .product-list,
+.sweets .product-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.food .product-list {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* =========================
+   ACCESS セクション
+========================= */
+.access__section {
+  padding: 100px 0;
+  background-color: #f9f7f5;
+}
+
+/* タイトル部分（共通デザインを想定） */
+.access__section .menu {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.access__section .menu h2 {
+  font-size: 2rem;
+  letter-spacing: 0.1em;
+  color: #4B3A2A;
+}
+
+.access__section .menu p {
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #a67b5b;
+  margin-top: 6px;
+}
+
+/* レイアウト本体 */
+.access {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap; /* レスポンシブ対応 */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 画像部分 */
+.access__img {
+  flex: 1 1 400px;
+  max-width: 450px;
+}
+
+.access__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* テキスト部分 */
+.access__text {
+  flex: 1 1 500px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 24px 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.access-info {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 24px;
+}
+
+.access-info li {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #4B3A2A;
+  border-bottom: 1px solid #eee;
+  padding: 8px 0;
+}
+
+.access-info strong {
+  color: #a67b5b;
+}
+
+/* Google Map */
+.map iframe {
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+
+/* -----------------------------
+   フッター
+----------------------------- */
+footer {
+  background-color: #f5f2ed;
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #4B3A2A;
+}
+
+footer .menu__list ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+footer .menu__list a {
+  color: #4B3A2A;
+  text-decoration: none;
+  position: relative;
+}
+
+footer .menu__list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: #4B3A2A;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+footer .menu__list a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cta-button .btn {
+  background-color: #8A9A5B;
+  color: #fff;
+  padding: 12px 32px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.cta-button .btn:hover {
+  background-color: #748a4d;
+}
+
+[id] {
+  scroll-margin-top: 100px; /* ヘッダーの高さに合わせて調整 */
+}
+
+.footer p{
+  margin-bottom:20px;
+}
+
+
+.access{
+display: flex;
+}
+
+/* 初期状態：透明で少し下にずらす */
+.fadein {
+  opacity: 0;
+  transform: translateY(20px); /* 下に30pxずらす */
+  transition: all 0.4s ease;     /* アニメーション時間とスムーズさ */
+}
+
+/* 表示状態：元の位置に戻しつつ透明度1 */
+.fadein.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+/* -----------------------------
+   スマホ用レスポンシブ
+----------------------------- */
+@media screen and (max-width: 768px) {
+
+  body {
+    font-size: 0.9rem;
+  }
+
+  .header {
+    flex-direction: column;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .menu__list ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .menu__list img {
+    width: 20%;
+    margin: 0 auto;
+  }
+
+  .slideshow-container {
+    height: 50vh;
+  }
+
+  .text {
+    margin: 150px 20px 0;
+    font-size: 1rem;
+  }
+
+  .menu {
+    margin: 80px 20px;
+    padding: 50px 0;
+  }
+
+  .menu h2 {
+    font-size: 1.5rem;
+  }
+
+  .menu p {
+    font-size: 0.7rem;
+  }
+
+  .news_article {
+    padding: 20px 15px;
+    margin: 80px auto;
+  }
+
+  .news_article h3 {
+    font-size: 0.95rem;
+  }
+
+  .about {
+    flex-direction: column;
+    margin: 50px 15px;
+  }
+
+  .about__text {
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .about__img img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  /* 商品カード */
+  .product-container {
+    width: 95%;
+    padding: 20px 0;
+  }
+
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .product-item {
+    width: 100%;
+  }
+
+  .product-item img {
+    height: 200px;
+  }
+
+  .drink__menu-container, 
+  .food__menu-container, 
+  .sweets__menu-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  @media screen and (max-width: 768px) {
+  .sweets__section .product-item,
+  .food .product-item,
+  .drink .product-item {
+    width: 100%;       /* 画面幅いっぱいに変更 */
+    margin-bottom: 20px;
+  }
+
+  .product-list {
+    flex-direction: column; /* 縦並びに */
+  }
+}
+
+
+  .drink__menu, .food__menu, .sweets__menu {
+    flex: 1 1 100%;
+  }
+
+  .access {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .access__img,
+  .access__text {
+    width: 100%;
+  }
+
+  .map iframe {
+    height: 200px;
+  }
+
+  footer {
+    padding: 30px 15px;
+    font-size: 0.85rem;
+  }
+
+  footer .menu__list ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cta-button .btn {
+    padding: 10px 24px;
+    font-size: 0.9rem;
+  }
+
+}
+
+
